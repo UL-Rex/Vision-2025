@@ -447,7 +447,7 @@ body.active {
 }
 
 /*-----------------------------------*\
-  #GEARS
+  #Products Gears
 \*-----------------------------------*/
 
 .gears {
@@ -590,7 +590,7 @@ body.active {
   /* background: url("https://wallpapers.com/images/hd/black-solid-background-2920-x-1642-jk98dr7udfcq3hqj.jpg") no-repeat; */
   /* background-size: cover;
   background-position: center; */
-  padding: 50px ;
+  padding: 50px;
   /* background-color: rgb(0, 12, 26); */
   background-color: rgb(9, 26, 46);
 
@@ -833,50 +833,6 @@ body.active {
     margin-inline: auto;
   }
 
-  /**
-   * ABOUT
-   */
-
-  .about-banner {
-    position: relative;
-    max-width: 410px;
-    margin-inline: auto;
-    z-index: 1;
-  }
-
-  .character-2 {
-    display: block;
-    position: absolute;
-    top: 120px;
-    left: 160px;
-    max-width: 150px;
-    z-index: -1;
-  }
-
-  .about-content {
-    padding: 60px 40px;
-  }
-
-  /**
-   * TOURNAMENT
-   */
-
-  .tournament-text {
-    max-width: 500px;
-    margin-inline: auto;
-  }
-
-  /**
-   * GALLERY
-   */
-
-  .gallery .container {
-    max-width: unset;
-  }
-
-  .gallery-list li {
-    min-width: 80%;
-  }
 }
 
 /**
@@ -937,111 +893,12 @@ body.active {
   }
 
   /**
-   * HERO
-   */
+     #Products Gears
 
-  .hero-subtitle {
-    --fs-7: 25px;
-    letter-spacing: 30px;
-  }
-
-  /**
-   * ABOUT
-   */
-
-  .about-banner {
-    max-width: 430px;
-  }
-
-  .character {
-    display: block;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .character-1 {
-    width: 130px;
-    top: 110px;
-    left: -120px;
-  }
-
-  .character-2 {
-    left: 200px;
-  }
-
-  .character-3 {
-    top: 0;
-    right: -112px;
-  }
-
-  /**
-   * GALLERY
-   */
-
-  .gallery-list {
-    padding-bottom: 30px;
-  }
-
-  .gallery-list li {
-    min-width: 70%;
-  }
-
-  /**
-   * GEARS
    */
 
   .gears-list {
     grid-template-columns: 1fr 1fr;
-  }
-
-  /**
-   * NEWSLETTER
-   */
-
-  .newsletter-card {
-    text-align: left;
-  }
-
-  .newsletter-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    max-width: 440px;
-    margin-inline: auto;
-  }
-
-  .newsletter-img {
-    margin-inline: 0;
-  }
-
-  .newsletter-form {
-    position: relative;
-    max-width: 530px;
-    margin-inline: auto;
-  }
-
-  .newsletter-form::after {
-    content: "";
-    position: absolute;
-    bottom: 9px;
-    left: -3px;
-    width: 27px;
-    height: 1px;
-    background: var(--white);
-    transform: rotate(43deg);
-  }
-
-  .newsletter .btn-secondary {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .newsletter .input-field {
-    clip-path: var(--polygon-4);
-    margin-bottom: 0;
   }
 
   /**
@@ -1255,114 +1112,12 @@ body.active {
   }
 
   /**
-   * ABOUT
-   */
-
-  .about {
-    padding-top: 200px;
-  }
-
-  .about-content {
-    max-width: 700px;
-    margin-inline: auto;
-  }
-
-  /**
-   * TOURNAMENT
-   */
-
-  .tournament {
-    --fs-2: 30px;
-    --fs-3: 30px;
-    --fs-6: 16px;
-
-    text-align: left;
-  }
-
-  .tournament .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .tournament-content,
-  .tournament-prize {
-    margin-bottom: 0;
-  }
-
-  .tournament-content {
-    max-width: 310px;
-  }
-
-  .tournament .btn-primary {
-    margin-inline: 0;
-  }
-
-  .tournament-prize,
-  .tournament-winners {
-    text-align: center;
-  }
-
-  .tournament-winners {
-    padding: 45px 40px;
-  }
-
-  /**
-   * GALLERY
-   */
-
-  .gallery-list {
-    gap: 30px;
-    padding-inline: 40px;
-  }
-
-  .gallery-list li {
-    min-width: 50%;
-  }
-
-  /**
-   * GEARS
+    #Products Gears
    */
 
   .card-time-wrapper {
     top: 4%;
     right: 8%;
-  }
-
-  /**
-   * NEWSLETTER
-   */
-
-  .newsletter {
-    padding-bottom: 200px;
-  }
-
-  .newsletter-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    padding: 45px 50px;
-  }
-
-  .newsletter-content {
-    margin-inline: 0;
-    margin-bottom: 0;
-  }
-
-  .newsletter-img {
-    padding-left: 30px;
-  }
-
-  .newsletter-form {
-    flex-grow: 1;
-  }
-
-  .newsletter-form::after {
-    bottom: 9px;
-    left: -5px;
-    width: 25px;
-    transform: rotate(52deg);
   }
 
   /**
@@ -1425,47 +1180,6 @@ body.active {
   }
 
   /**
-   * HERO
-   */
-
-  .hero {
-    margin-top: 110px;
-  }
-
-  /**
-   * ABOUT
-   */
-
-  .about {
-    background-size: 55%;
-    background-position: 90% center;
-  }
-
-  .about .container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
-    padding-right: 110px;
-  }
-
-  .about-banner {
-    margin-inline: 0;
-    margin-bottom: 0;
-  }
-
-  .character-2 {
-    left: 155px;
-    top: 70px;
-  }
-
-  .about-content {
-    max-width: 600px;
-    margin-inline: 0;
-  }
-
-  /**
    * TEAM 
    */
 
@@ -1474,7 +1188,7 @@ body.active {
   }
 
   /**
-   * GEARS
+  #Products Gears
    */
 
   .gears-list {
@@ -1484,32 +1198,6 @@ body.active {
   .card-time-wrapper {
     top: 3.5%;
     right: 7%;
-  }
-
-  /**
-   * NEWSLETTER
-   */
-
-  .newsletter-card {
-    padding-block: 60px;
-  }
-
-  .newsletter-content {
-    max-width: 500px;
-  }
-
-  .newsletter-title {
-    --fs-3: 40px;
-  }
-
-  .newsletter-form {
-    max-width: 450px;
-    margin-inline: 0;
-  }
-
-  .newsletter-form::after {
-    left: -3px;
-    transform: rotate(46deg);
   }
 
   /**
@@ -1582,8 +1270,8 @@ body.active {
   max-width: 420px;
   width: 90%;
   /* font-family: 'Orbitron', sans-serif; */
-            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */font-family: "Oswald", sans-serif;
-
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Oswald", sans-serif;
   color: #00ffff;
   animation: slideZoom 0.6s ease;
   position: relative;
@@ -1694,5 +1382,3 @@ body.active {
   border-radius: 50%;
   font-weight: bold;
 }
-
-
