@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOIDRIX - Sellers Table</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .h1M {
+        margin-top: 130px;
+    }
+
+    .navbar .logolink {
+        font-size: x-large;
+    }
+
+    @media (max-width: 1024px) {
+
+        .h1M {
+            margin-top: 135px;
+        }
+
+    }
+
+    @media (max-width: 764px) {
+
+        .h1M {
+            margin-top: 145px;
+        }
+
+    }
+</style>
+
+<body>
+
+
+   <!-- 
+    - #Header
+  -->
+    <header class="header">
+
+        <!-- 
+      - overlay
+    -->
+        <div class="overlay" data-overlay></div>
+
+        <div class="container">
+
+            <div class="logoContain">
+                <a href="../index.html" class="logo">
+                    <img src="../FF01.png" alt="logo" height="100px">
+                </a>
+                <a href="../index.html" class="logolink">VOIDRIX</a>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-nav>
+
+                <div class="navbar-top">
+
+                    <div class="logoContain">
+                        <a href="../index.html" class="logo">
+                            <img src="../FF01.png" alt="logo" height="100px">
+                        </a>
+                        <a href="../index.html" class="logolink">VOIDRIX</a>
+                    </div>
+
+                    <button class="nav-close-btn" data-nav-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="../index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="../product.html" class="navbar-link">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="../about.html" class="navbar-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="../bestSellers.html" class="navbar-link">Best sellers</a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="nav-social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Product Modal -->
+            <div class="product-modal" id="productModal">
+                <div class="modal-content neon-box">
+                    <h3>Products Category</h3>
+                    <ul>
+                       <li><a href="product.html">All Products</a></li>
+                        <li><a href="smartDevices.html">Smart Devices</a></li>
+                        <li><a href="wearableTech.html">Wearable Tech</a></li>
+                        <li><a href="gamingTech.html">Gaming Tech</a></li>
+                        <li><a href="pcEquipments.html">PC Equipments</a></li>
+                        <li><a href="audioSpeakers.html">Audio & Speakers</a></li>
+                        <li><a href="homeAutomation.html">Home Automation</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="digitalArtifacts.html">Digital Artifacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal End -->
+
+            <div class="header-actions">
+
+                <button class="search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="btn-sign_in" onclick="window.location.href='../login.html'">
+
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+
+                    <span>Log-in</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Table -->
+    <h1 class="bg-dark text-light text-center p-sm-2 p-md-3 h1M">Sellers Information</h1>
+
+    <div class="table-responsive">
+
+        <table class="table text-center table-hover table-bordered table-dark table-striped">
+
+            <tr class="fs-5">
+                <th class="text-warning">S.No:</th>
+                <th class="text-warning">Names</th>
+                <th class="text-warning">City</th>
+                <th class="text-warning">Seller ID</th>
+                <th class="text-warning">Seller Email</th>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">1.</td>
+                <td>UL</td>
+                <td>Karachi</td>
+                <td>#0150</td>
+                <td>ul@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">2.</td>
+                <td>ULA</td>
+                <td>Islamabad</td>
+                <td>#0452</td>
+                <td>ula@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">3.</td>
+                <td>Usama</td>
+                <td>Lohore</td>
+                <td>#0551</td>
+                <td>usama@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">4.</td>
+                <td>Ali</td>
+                <td>Karachi</td>
+                <td>#0557</td>
+                <td>ali@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">5.</td>
+                <td>Ahemad</td>
+                <td>Lohore</td>
+                <td>#0879</td>
+                <td>ahemad@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">6.</td>
+                <td>Jafir</td>
+                <td>Hyderabad</td>
+                <td>#0678</td>
+                <td>jafir@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">7.</td>
+                <td>Sara</td>
+                <td>Karachi</td>
+                <td>#0545</td>
+                <td>sara@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">8.</td>
+                <td>Haniya</td>
+                <td>Rawalpindi</td>
+                <td>#0154</td>
+                <td>haniya@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">9.</td>
+                <td>Maryam</td>
+                <td>Lohore</td>
+                <td>#0684</td>
+                <td>maryam@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">10.</td>
+                <td>Makhdoom</td>
+                <td>Karachi</td>
+                <td>#0894</td>
+                <td>Makhdoom@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">11.</td>
+                <td>Arif</td>
+                <td>Karachi</td>
+                <td>#0855</td>
+                <td>arif@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">12.</td>
+                <td>Arifa</td>
+                <td>Islamabad</td>
+                <td>#0052</td>
+                <td>arifa@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">13.</td>
+                <td>Iman</td>
+                <td>Lohore</td>
+                <td>#0591</td>
+                <td>iman@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">14.</td>
+                <td>Aliza</td>
+                <td>Karachi</td>
+                <td>#0587</td>
+                <td>aliza@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">15.</td>
+                <td>Ahema</td>
+                <td>Lohore</td>
+                <td>#0809</td>
+                <td>ahema@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">16.</td>
+                <td>Jafira</td>
+                <td>Hyderabad</td>
+                <td>#0608</td>
+                <td>jafira@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">17.</td>
+                <td>Sana</td>
+                <td>Karachi</td>
+                <td>#0505</td>
+                <td>sana@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">18.</td>
+                <td>Haniyan</td>
+                <td>Rawalpindi</td>
+                <td>#0254</td>
+                <td>haniyan@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">19.</td>
+                <td>Maaz</td>
+                <td>Lohore</td>
+                <td>#0604</td>
+                <td>maaz@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td class="fw-bold">20.</td>
+                <td>Majid</td>
+                <td>Karachi</td>
+                <td>#0890</td>
+                <td>majid@gmail.com</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <a href="../index.html" class="logo">
+                        <img src="../FF01.png" alt="logo" height="100px">
+                    </a>
+
+                    <div class="footer-menu-wrapper">
+
+                        <ul class="footer-menu-list">
+
+                            <li>
+                                <a href="../index.html" class="footer-menu-link">Home</a>
+                            </li>
+
+                            <li>
+                               <a href="#" id="openProductModal" class="footer-menu-link">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="../about.html" class="footer-menu-link">About</a>
+                            </li>
+
+                            <li>
+                                <a href="../contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+
+                            <li>
+                                <a href="../bestSellers.html" class="footer-menu-link">Best Sellers</a>
+                            </li>
+
+
+
+                        </ul>
+
+                        <div class="footer-input-wrapper">
+                            <input type="text" name="message" required placeholder="Find Here Now" class="footer-input">
+
+                            <button class="btn btn-primary">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-quicklinks">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="FAQs.html" class="quicklink-item">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="helpCenter.html" class="quicklink-item">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="TermsOfUse.html" class="quicklink-item">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="privacyPolicy.html" class="quicklink-item">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-social-list">
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-discord"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    Copyright &copy; 2022 <a href="#">VOIDRIX</a>. all rights reserved
+                </p>
+
+                <figure class="footer-bottom-img">
+                    <img src="original-d5cfc4c247c486311060628c9bac15ae-removebg-preview.png"
+                        alt="Online payment companies logo" height="30px">
+                </figure>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="../script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

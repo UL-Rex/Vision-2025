@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOIDRIX Cart</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- main css link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        span {
+            display: inline;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        .containerCart {
+            max-width: 1100px;
+            font-family: 'Inter', sans-serif;
+            margin: auto;
+            padding: 150px 20px 50px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cart-table thead {
+            background: #1a1a1a;
+        }
+
+        .cart-table th,
+        .cart-table td {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .cart-table tbody tr {
+            border-bottom: 1px solid #222;
+            transition: background 0.3s;
+        }
+
+        .cart-table tbody tr:hover {
+            background: #1a1a1a;
+        }
+
+        .cart-img {
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        .qty-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .qty-box button {
+            width: 30px;
+            height: 30px;
+            background: #00bfff;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            background: red;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .summary {
+            margin-top: 40px;
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .summary h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+
+        .checkout-btn {
+            margin-top: 20px;
+            background: #00bfff;
+            color: black;
+            padding: 15px 30px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #0099cc;
+        }
+
+        @media(max-width: 768px) {
+            .cart-table thead {
+                display: none;
+            }
+
+            .cart-table,
+            .cart-table tbody,
+            .cart-table tr,
+            .cart-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .cart-table td {
+                padding: 10px 0;
+                border-bottom: 1px solid #222;
+            }
+
+            .qty-box {
+                justify-content: space-between;
+                max-width: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    - #Header
+  -->
+    <header class="header">
+
+        <!-- 
+      - overlay
+    -->
+        <div class="overlay" data-overlay></div>
+
+        <div class="container">
+
+            <div class="logoContain">
+                <a href="index.html" class="logo">
+                    <img src="FF01.png" alt="logo" height="100px">
+                </a>
+                <a href="index.html" class="logolink">VOIDRIX</a>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-nav>
+
+                <div class="navbar-top">
+
+                    <div class="logoContain">
+                        <a href="index.html" class="logo">
+                            <img src="FF01.png" alt="logo" height="100px">
+                        </a>
+                        <a href="index.html" class="logolink">VOIDRIX</a>
+                    </div>
+
+                    <button class="nav-close-btn" data-nav-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="product.html" class="navbar-link">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="navbar-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="bestSellers.html" class="navbar-link">Best sellers</a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="nav-social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Product Modal -->
+            <div class="product-modal" id="productModal">
+                <div class="modal-content neon-box">
+                    <h3>Products Category</h3>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="smartDevices.html">Smart Devices</a></li>
+                        <li><a href="wearableTech.html">Wearable Tech</a></li>
+                        <li><a href="gamingTech.html">Gaming Tech</a></li>
+                        <li><a href="pcEquipments.html">PC Equipments</a></li>
+                        <li><a href="audioSpeakers.html">Audio & Speakers</a></li>
+                        <li><a href="homeAutomation.html">Home Automation</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="digitalArtifacts.html">Digital Artifacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal End -->
+
+            <div class="header-actions">
+
+                <button class="search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="btn-sign_in" onclick="window.location.href='login.html'">
+
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+
+                    <span>Log-in</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="containerCart">
+        <h1>Your Cart Details</h1>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product:</th>
+                    <th>Title:</th>
+                    <th>Price:</th>
+                    <th>Qty.</th>
+                    <th>Subtotal:</th>
+                    <th>Action:</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+                <!-- JS will inject here -->
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+                <span>Subtotal:</span>
+                <span>$<span id="subtotal">0.00</span></span>
+            </div>
+            <div class="summary-item">
+                <span>Estimated Delivery:</span>
+                <span>Free</span>
+            </div>
+            <div class="summary-item" style="font-weight: 700;">
+                <span>Total:</span>
+                <span>$<span id="total">0.00</span></span>
+            </div>
+
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <a href="#" class="logo">
+                        <img src="FF01.png" alt="logo" height="100px">
+                    </a>
+
+                    <div class="footer-menu-wrapper">
+
+                        <ul class="footer-menu-list">
+
+                            <li>
+                                <a href="index.html" class="footer-menu-link">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#" id="openProductModal" class="footer-menu-link">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+
+                            <li>
+                                <a href="bestSellers.html" class="footer-menu-link">Best Sellers</a>
+                            </li>
+
+
+
+                        </ul>
+
+                        <div class="footer-input-wrapper">
+                            <input type="text" name="message" required placeholder="Find Here Now" class="footer-input">
+
+                            <button class="btn btn-primary">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-quicklinks">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="ExtraPages/FAQs.html" class="quicklink-item">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/helpCenter.html" class="quicklink-item">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/TermsOfUse.html" class="quicklink-item">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/privacyPolicy.html" class="quicklink-item">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-social-list">
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-discord"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    Copyright &copy; 2022 <a href="#">VOIDRIX</a>. all rights reserved
+                </p>
+
+                <figure class="footer-bottom-img">
+                    <img src="original-d5cfc4c247c486311060628c9bac15ae-removebg-preview.png"
+                        alt="Online payment companies logo" height="30px">
+                </figure>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let cart = [
+            {
+                id: 1,
+                title: "Product 1",
+                price: 19.79,
+                qty: 1,
+                image: "https://png.pngtree.com/png-vector/20240926/ourmid/pngtree-game-controller-playstation-dualshock-4-black-matte-finish-ergonomic-design-directional-png-image_13917504.png"
+            },
+            {
+                id: 2,
+                title: "Product 2",
+                price: 25.00,
+                qty: 2,
+                image: "https://png.pngtree.com/png-vector/20240601/ourmid/pngtree-mobile-gaming-gadget-and-production-png-image_12588523.png"
+            },
+            {
+                id: 3,
+                title: "Product 3",
+                price: 200.00,
+                qty: 2,
+                image: "https://hukut.com/_next/image?url=https%3A%2F%2Fcdn.hukut.com%2Fgigabyte-geforce-rtx-5090-gaming-oc-32gb.png1746788426692&w=3840&q=75"
+            },
+            {
+                id: 4,
+                title: "Product 4",
+                price: 15.00,
+                qty: 2,
+                image: "https://d1gb7gicmr8iau.cloudfront.net/fit-in/600x450/Media/Images/Product/Visual/25155_pictures_product_visual_1.png"
+            }
+        ];
+
+        function renderCart() {
+            const tbody = document.getElementById("cartBody");
+            const subtotalEl = document.getElementById("subtotal");
+            const totalEl = document.getElementById("total");
+            tbody.innerHTML = "";
+
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                let itemSubtotal = item.price * item.qty;
+                subtotal += itemSubtotal;
+
+                let row = document.createElement("tr");
+                row.innerHTML = `<td><img src="${item.image}" class="cart-img"></td>
+        <td>${item.title}</td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td>
+          <div class="qty-box">
+            <button onclick="changeQty(${item.id}, -1)">−</button>
+            <span>${item.qty}</span>
+            <button onclick="changeQty(${item.id}, 1)">+</button>
+          </div>
+        </td>
+        <td>$${itemSubtotal.toFixed(2)}</td>
+        <td><button class="remove-btn" onclick="removeItem(${item.id})">Remove</button></td>
+      `;
+                tbody.appendChild(row);
+            });
+
+            subtotalEl.innerText = subtotal.toFixed(2);
+            totalEl.innerText = subtotal.toFixed(2);
+        }
+
+        function changeQty(id, delta) {
+            let item = cart.find(p => p.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty < 1) item.qty = 1;
+                renderCart();
+            }
+        }
+
+        function removeItem(id) {
+            cart = cart.filter(item => item.id !== id);
+            renderCart();
+        }
+
+        renderCart();
+
+
+        // Alert on Checkout
+        document.querySelector(".checkout-btn").addEventListener("click", function () {
+            alert("Thank you for shopping 🛒 with VOIDRIX!");
+            window.location.href = "product.html";
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

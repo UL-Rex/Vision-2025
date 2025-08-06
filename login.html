@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOIDRIX - Login</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- main css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            
+        }
+
+        .loginMainCon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        canvas#bgCanvas {
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 440px;
+            width: 100%;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            animation: floatUp 1.2s ease forwards;
+            transition: transform 0.5s ease;
+            margin: 130px 0 70px 0;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .login-container h2 {
+            color: orange;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        .login-container .tagline {
+            color: #ccc;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 13px;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .login-container input::placeholder {
+            color: #bbb;
+        }
+
+        .login-container input:focus {
+            border: 1px solid #00ffff;
+            box-shadow: 0 0 8px #00ffff;
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        #remember {
+            margin-top: 20px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .remember input {
+            width: auto;
+            accent-color: #00ffff;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            /* background: linear-gradient(135deg, #00ffff, #00aaff); */
+            background-color: orange;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-container button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 18px #00ffff;
+        }
+
+        .social-login {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-login a {
+            color: rgb(255, 231, 186);
+            font-size: 22px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-login a:hover {
+            transform: scale(1.3);
+            color: orange;
+        }
+
+        .login-container .link,
+        .login-container .guest {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .login-container .link a,
+        .login-container .guest a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        .login-container .forgot {
+            text-align: right;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: -12px;
+            /* margin-bottom: 15px; */
+        }
+
+        .login-container .forgot a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 480px) {
+            .login-container {
+                padding: 35px 25px;
+            }
+
+            .login-container h2 {
+                font-size: 24px;
+            }
+
+            .login-container .tagline {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+    - #Header
+  -->
+    <header class="header">
+
+        <!-- 
+      - overlay
+    -->
+        <div class="overlay" data-overlay></div>
+
+        <div class="container">
+
+            <div class="logoContain">
+                <a href="index.html" class="logo">
+                    <img src="FF01.png" alt="logo" height="100px">
+                </a>
+                <a href="index.html" class="logolink">VOIDRIX</a>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-nav>
+
+                <div class="navbar-top">
+
+                    <div class="logoContain">
+                        <a href="index.html" class="logo">
+                            <img src="FF01.png" alt="logo" height="100px">
+                        </a>
+                        <a href="index.html" class="logolink">VOIDRIX</a>
+                    </div>
+
+                    <button class="nav-close-btn" data-nav-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="product.html" class="navbar-link">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="navbar-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="bestSellers.html" class="navbar-link">Best sellers</a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="nav-social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Product Modal -->
+            <div class="product-modal" id="productModal">
+                <div class="modal-content neon-box">
+                    <h3>Products Category</h3>
+                    <ul>
+                       <li><a href="product.html">All Products</a></li>
+                        <li><a href="smartDevices.html">Smart Devices</a></li>
+                        <li><a href="wearableTech.html">Wearable Tech</a></li>
+                        <li><a href="gamingTech.html">Gaming Tech</a></li>
+                        <li><a href="pcEquipments.html">PC Equipments</a></li>
+                        <li><a href="audioSpeakers.html">Audio & Speakers</a></li>
+                        <li><a href="homeAutomation.html">Home Automation</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="digitalArtifacts.html">Digital Artifacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal End -->
+
+            <div class="header-actions">
+
+                <button class="search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="btn-sign_in" onclick="window.location.href='login.html'">
+
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+
+                    <span>Log-in</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="loginMainCon">
+
+        <canvas id="bgCanvas"></canvas>
+
+        <div class="login-container">
+            <h2>Welcome to VOIDRIX</h2>
+            <div class="tagline">Enter the future. Shop like never before.</div>
+            <input type="email" placeholder="Email" title="Enter your email address" required>
+            <input type="password" placeholder="Password" title="Enter your password" required>
+
+            <div class="forgot">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <button>Log In</button>
+
+            <div class="social-login">
+                <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+
+            <div class="link">
+                Don’t have an account? <a href="#">Register</a>
+            </div>
+            <div class="guest">
+                or <a href="#">Continue as Guest</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particles = [];
+        for (let i = 0; i < 60; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2,
+                dx: (Math.random() - 0.5) * 0.8,
+                dy: (Math.random() - 0.5) * 0.8
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ffff';
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            update();
+            requestAnimationFrame(draw);
+        }
+
+        function update() {
+            particles.forEach(p => {
+                p.x += p.dx;
+                p.y += p.dy;
+
+                if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+            });
+        }
+
+        draw();
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <a href="#" class="logo">
+                        <img src="FF01.png" alt="logo" height="100px">
+                    </a>
+
+                    <div class="footer-menu-wrapper">
+
+                        <ul class="footer-menu-list">
+
+                            <li>
+                                <a href="index.html" class="footer-menu-link">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#" id="openProductModal" class="footer-menu-link">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+
+                            <li>
+                                <a href="bestSellers.html" class="footer-menu-link">Best Sellers</a>
+                            </li>
+
+
+
+                        </ul>
+
+                        <div class="footer-input-wrapper">
+                            <input type="text" name="message" required placeholder="Find Here Now" class="footer-input">
+
+                            <button class="btn btn-primary">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-quicklinks">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="ExtraPages/FAQs.html" class="quicklink-item">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/helpCenter.html" class="quicklink-item">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/TermsOfUse.html" class="quicklink-item">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/privacyPolicy.html" class="quicklink-item">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-social-list">
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-discord"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    Copyright &copy; 2022 <a href="#">VOIDRIX</a>. all rights reserved
+                </p>
+
+                <figure class="footer-bottom-img">
+                    <img src="original-d5cfc4c247c486311060628c9bac15ae-removebg-preview.png"
+                        alt="Online payment companies logo" height="30px">
+                </figure>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

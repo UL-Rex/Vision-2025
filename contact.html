@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact VOIDRIX</title>
+    <meta name="description" content="Have questions or need support? Contact VOIDRIX for inquiries, customer service, and partnership opportunities. We’re here to help you." />
+<meta name="keywords" content="contact VOIDRIX, VOIDRIX support, VOIDRIX customer service, tech support Pakistan, VOIDRIX email, call VOIDRIX" />
+<meta name="UL" content="VOIDRIX" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 
+    - google font link
+  -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: 'Orbitron', sans-serif; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    body {
+        background: linear-gradient(135deg, #020d1f, #000000);
+        color: hsl(35, 100%, 51%);
+        overflow-x: hidden;
+    }
+
+    .contact-hero {
+        margin-top: 100px;
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .contact-info {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    .contact-info h1 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 15px;
+        color: #ccc;
+        margin-bottom: 30px;
+    }
+
+    .info-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        background: rgba(0, 255, 255, 0.05);
+        border: 1px solid #00ffff44;
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 0 15px #00ffff22;
+    }
+
+    .card ion-icon {
+        font-size: 28px;
+        color: #f5f5f5;
+    }
+
+    .card h4 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .card p {
+        margin: 0;
+        font-size: 16px;
+        color: #ccc;
+    }
+
+    .socials {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        /* center align horizontally */
+        gap: 20px;
+        /* space between icons */
+        margin-top: 30px;
+    }
+
+    .socials a {
+        display: flex;
+        margin-right: 15px;
+        font-size: 22px;
+        color: #f3f3f3;
+        transition: 0.3s;
+    }
+
+    .socials a:hover {
+        color: #fff;
+        transform: scale(1.2);
+    }
+
+    .contact-form {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid #00ffff33;
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px #00ffff33;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid #00ffff44;
+        border-radius: 10px;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        box-shadow: 0 0 12px #00ffff88;
+        border-color: #00ffff;
+    }
+
+    .contact-form button {
+        padding: 12px 30px;
+        background: hsl(35, 100%, 51%);
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background: hsl(0, 0%, 0%);
+        color: white;
+        box-shadow: 0 0 10px #00ffff99;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        margin-top: 40px;
+        border-top: 1px solid #00ffff33;
+        padding-top: 20px;
+    }
+</style>
+
+<body>
+
+      <!-- 
+    - #Header
+  -->
+    <header class="header">
+
+        <!-- 
+      - overlay
+    -->
+        <div class="overlay" data-overlay></div>
+
+        <div class="container">
+
+            <div class="logoContain">
+                <a href="index.html" class="logo">
+                    <img src="FF01.png" alt="logo" height="100px">
+                </a>
+                <a href="index.html" class="logolink">VOIDRIX</a>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <nav class="navbar" data-nav>
+
+                <div class="navbar-top">
+
+                    <div class="logoContain">
+                        <a href="index.html" class="logo">
+                            <img src="FF01.png" alt="logo" height="100px">
+                        </a>
+                        <a href="index.html" class="logolink">VOIDRIX</a>
+                    </div>
+
+                    <button class="nav-close-btn" data-nav-close-btn>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="product.html" class="navbar-link">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="navbar-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="bestSellers.html" class="navbar-link">Best sellers</a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="nav-social-list">
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Product Modal -->
+            <div class="product-modal" id="productModal">
+                <div class="modal-content neon-box">
+                    <h3>Products Category</h3>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="smartDevices.html">Smart Devices</a></li>
+                        <li><a href="wearableTech.html">Wearable Tech</a></li>
+                        <li><a href="gamingTech.html">Gaming Tech</a></li>
+                        <li><a href="pcEquipments.html">PC Equipments</a></li>
+                        <li><a href="audioSpeakers.html">Audio & Speakers</a></li>
+                        <li><a href="homeAutomation.html">Home Automation</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="digitalArtifacts.html">Digital Artifacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Modal End -->
+
+            <div class="header-actions">
+
+                <button class="search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="btn-sign_in" onclick="window.location.href='login.html'">
+
+                    <div class="icon-box">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                    </div>
+
+                    <span>Log-in</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h1>Contact Us !</h1>
+                <p>Have a question? Let's build the future together. Reach out to VOIDRIX support or connect through our
+                    socials.</p>
+
+                <div class="info-cards">
+                    <div class="card">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <h4>Email:</h4>
+                        <p>support@voidrix.com</p>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <h4>Phone:</h4>
+                        <p>+92 123 4567890</p>
+                    </div>
+                    <div class="card">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <h4>Address:</h4>
+                        <p>VOIDRIX HQ, Digital Sector, Karachi, PK</p>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <h2>Send Us a Message</h2>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+            <!-- Map container inside contact-container -->
+            <div class="map-wrapper">
+                <iframe src="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                    height="300" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    
+     <!-- 
+    - #FOOTER
+  -->
+
+    <footer>
+
+        <div class="footer-top">
+            <div class="container">
+
+                <div class="footer-brand-wrapper">
+
+                    <a href="#" class="logo">
+                        <img src="FF01.png" alt="logo" height="100px">
+                    </a>
+
+                    <div class="footer-menu-wrapper">
+
+                        <ul class="footer-menu-list">
+
+                            <li>
+                                <a href="index.html" class="footer-menu-link">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#" id="openProductModal" class="footer-menu-link">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="about.html" class="footer-menu-link">About</a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html" class="footer-menu-link">Contact</a>
+                            </li>
+
+                            <li>
+                                <a href="bestSellers.html" class="footer-menu-link">Best Sellers</a>
+                            </li>
+
+
+
+                        </ul>
+
+                        <div class="footer-input-wrapper">
+                            <input type="text" name="message" required placeholder="Find Here Now" class="footer-input">
+
+                            <button class="btn btn-primary">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-quicklinks">
+
+                    <ul class="quicklink-list">
+
+                        <li>
+                            <a href="ExtraPages/FAQs.html" class="quicklink-item">Faq</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/helpCenter.html" class="quicklink-item">Help center</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/TermsOfUse.html" class="quicklink-item">Terms of use</a>
+                        </li>
+
+                        <li>
+                            <a href="ExtraPages/privacyPolicy.html" class="quicklink-item">Privacy</a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="footer-social-list">
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-discord"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-social-link">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    Copyright &copy; 2022 <a href="#">VOIDRIX</a>. all rights reserved
+                </p>
+
+                <figure class="footer-bottom-img">
+                    <img src="original-d5cfc4c247c486311060628c9bac15ae-removebg-preview.png"
+                        alt="Online payment companies logo" height="30px">
+                </figure>
+            </div>
+        </div>
+
+    </footer>
+
+
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+         <script src="script.js"></script>
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>
